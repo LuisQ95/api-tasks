@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 app.use(express.json());
 
-const PORT = 3001; // Usaremos un puerto diferente para no chocar con el otro proyecto
+const PORT = 9000; // Usaremos un puerto diferente para no chocar con el otro proyecto
 const dbPath = './tasks.db';
 
 // Conectar a la base de datos
@@ -72,4 +72,5 @@ app.delete('/tasks/:id', (req, res) => {
 // Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Task manager API running on http://localhost:${PORT}`);
+
 });
